@@ -170,7 +170,6 @@ body {
   color: var(--neutral-5);
   font-size: var(--fs-body-medium);
   line-height: var(--lh-body-medium);
-
 }
 
 ::-webkit-scrollbar {
@@ -263,6 +262,25 @@ body {
   margin-inline: auto;
 }
 
+.section {
+  padding-block-end: 60px;
+}
+
+.title-wrapper {
+  margin-block-end: 32px;
+}
+
+.img-holder {
+  aspect-ratio: var(--width) / var(--height);
+  background-color: var(--neutral-80);
+  overflow: hidden;
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 /*-----------------------------------*\
   #COMPONENT
 \*-----------------------------------*/
@@ -329,8 +347,124 @@ body {
   background-color: var(--neutral-90);
 }
 
+/**
+* BADGE
+*/
+
+.badge {
+  height: 32px;
+  max-width: max-content;
+  display: grid;
+  place-items: center;
+  padding-inline: 16px;
+  background-color: var(--secondary-100);
+  border-radius: var(--radius-small);
+  box-shadow: var(--shadow-3);
+}
+
+/**
+* CARD
+*/
+
+.card {
+  border-radius: var(--radius-large);
+  overflow: hidden;
+  box-shadow: var(--shadow-2);
+  transition: var(--transition-duration-quick) var(--transition-easing-quick);
+  
+}
+
+.card:where(:hover, :focus-within) {
+  box-shadow: var(--shadow-4);
+}
+
+.card-banner{
+  position: relative;
+}
+
+.card-banner .img-cover{
+  transition: var(--transition-duration-smooth) var(--transition-easing-quick);
+
+}
+
+.card:where(:hover, :focus-within) .img-cover{
+  scale: 1.05;
+  rotate: 2deg;
+}
+
+.card :where(.badge, .icon-btn){
+  position: absolute;
+  top: 20px;
+}
+
+.card .badge{
+  left: 20px;
+}
+
+.card .icon-btn{
+  right: 20px;
+  opacity: 0;
+  visibility: hidden;
+  scale: 0.8;
+  transition: var(--transition-duration-quick) var(--transition-easing-quick);
+
+}
+
+.fav-btn{
+    color: var(--error-100);
+}
+
+.fav-btn.active .material-symbols-rounded{
+  font-variation-settings: 'FILL' 1;
+}
+
+
+.card:where(:hover, :focus-within) .icon-btn{
+  scale: 1;
+  opacity: 1;
+  visibility: visible;
+}
+
+.card-content{
+  padding: 20px 20px 24px;
+}
+
+.card-title{
+  margin-block: 8px;
+  color: var(--neutral-20);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: var(--transition-duration-quick) var(--transition-easing-quick);
+}
+
+.card-title:where(:hover, :focus-visible){
+  color: var(--primary-100);
+}
+
+.card-text{
+  color: var(--neutral-40);
+}
+
+.card-meta-list{
+  padding-block-start: 16px;
+  margin-block-start: 16px;
+  border-block-start: 1px solid var(--neutral-90);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.card .meta-item{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--neutral-20);
+}
 /*-----------------------------------*\
-  #HEADER
+|  #HEADER                            |
 \*-----------------------------------*/
 
 .header {
@@ -408,19 +542,18 @@ body {
   color: var(--neutral-30);
   padding: 6px 12px;
   transition: var(--transition-duration-quick) var(--transition-easing-quick);
-
 }
-.btn-link{
+.btn-link {
   border-block-start: 1px solid var(--neutral-90);
-  padding-block-start:14px ;
+  padding-block-start: 14px;
 }
 
 :is(.navbar-link, .btn-link):is(:hover, :focus-visible),
-.navbar-link.active{
+.navbar-link.active {
   color: var(--primary-100);
 }
 
-.navbar .btn{
+.navbar .btn {
   min-width: 100%;
 }
 /*-----------------------------------*\
@@ -428,11 +561,11 @@ body {
   #HERO
 \*-----------------------------------*/
 
-.hero-banner{
+.hero-banner {
   display: none;
 }
 
-.hero{
+.hero {
   position: relative;
   background-image: var(--gradient);
   color: var(--neutral-90);
@@ -441,13 +574,13 @@ body {
   isolation: isolate;
 }
 
-.hero-title{
+.hero-title {
   color: var(--neutral-100);
 }
-.hero-text{
+.hero-text {
   margin-block: 16px 32px;
 }
-.search-bar{
+.search-bar {
   background: var(--white);
   display: grid;
   padding: 8px;
@@ -456,12 +589,12 @@ body {
   box-shadow: var(--shadow-4);
 }
 
-.search-item{
+.search-item {
   position: relative;
   color: var(--neutral-50);
 }
 
-.search-item .search-item-field{
+.search-item .search-item-field {
   height: 76px;
   padding: 40px 16px 12px;
   border-radius: var(--radius-medium);
@@ -469,30 +602,29 @@ body {
   cursor: pointer;
 }
 
-.search-item .search-item-field:where(:hover,:focus){
+.search-item .search-item-field:where(:hover, :focus) {
   background-color: var(--neutral-95);
-
 }
 
-.search-item :where(.label, .material-symbols-rounded){
+.search-item :where(.label, .material-symbols-rounded) {
   position: absolute;
   pointer-events: none;
 }
 
-.search-item .label{
+.search-item .label {
   top: 12px;
   left: 16px;
   color: var(--neutral-5);
 }
 
-.search-item .material-symbols-rounded{
+.search-item .material-symbols-rounded {
   top: 50%;
   right: 16px;
   translate: 0 -50%;
   color: var(--primary-100);
 }
 
-.search-btn{
+.search-btn {
   background: var(--primary-100);
   color: var(--neutral-100);
   display: flex;
@@ -502,19 +634,18 @@ body {
   padding-inline: 24px;
   gap: 12px;
   border-radius: 12px;
-    transition: var(--transition-duration-quick) var(--transition-easing-quick);
-
+  transition: var(--transition-duration-quick) var(--transition-easing-quick);
 }
 
-.search-btn:where(:hover, :focus){
+.search-btn:where(:hover, :focus) {
   background-color: var(--primary-80);
 }
 
-.search-btn:where(:active,:focus-visible){
+.search-btn:where(:active, :focus-visible) {
   background-color: var(--primary-70);
 }
 
-.hero .bg-pattern{
+.hero .bg-pattern {
   position: absolute;
   top: 50%;
   left: 25%;
@@ -524,7 +655,6 @@ body {
   pointer-events: none;
   z-index: 2;
 }
-
 
 /*-----------------------------------*\
   #PROPERTY
