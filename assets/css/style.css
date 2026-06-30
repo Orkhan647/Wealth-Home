@@ -857,7 +857,8 @@ body {
   #FOOTER
 \*-----------------------------------*/
 
-.footer {
+.footer, 
+.footer-bottom {
   background-color: var(--primary-20);
   color: var(--neutral-90);
 }
