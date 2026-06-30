@@ -23,14 +23,4 @@ window.addEventListener("scroll", e =>{
 });
 
 
-/**
- * Add to favorite btn toggle
- */
 
-const /**{NoodeList} */ $toggleBtns = document.querySelectorAll("[data-toggle-btn]") ;
-
-$toggleBtns.forEach($toggleBtn =>{
-$toggleBtn.addEventListener("click",()=>{
-    $toggleBtn.classList.toggle("active");
-})
-});
