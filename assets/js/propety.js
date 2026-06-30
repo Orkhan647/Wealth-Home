@@ -1,7 +1,7 @@
 const properties = [
   {
     image: "./assets/images/property-1.jpg",
-    alt: "COVA Home Realty",
+    alt: "SeaBreeze Estate",
     badge: "New",
     price: "$710.68",
     title: "COVA Home Realty",
@@ -13,7 +13,7 @@ const properties = [
 
   {
     image: "./assets/images/property-2.jpg",
-    alt: "Exit Realty",
+    alt: "Best Home Estate",
     badge: "",
     price: "$630.44",
     title: "Exit Realty",
@@ -25,7 +25,7 @@ const properties = [
 
   {
     image: "./assets/images/property-3.jpg",
-    alt: "The Real Estate Group",
+    alt: "Royal Estate",
     badge: "",
     price: "$475.22",
     title: "The Real Estate Group",
@@ -37,7 +37,7 @@ const properties = [
 
   {
     image: "./assets/images/property-4.jpg",
-    alt: "757 Realty",
+    alt: "Premium Home Estate",
     badge: "",
     price: "$576.28",
     title: "757 Realty",
@@ -49,7 +49,7 @@ const properties = [
 
   {
     image: "./assets/images/property-5.jpg",
-    alt: "Beach Pros Realty Inc.",
+    alt: "Luxury Home Estate",
     badge: "",
     price: "$473.85",
     title: "Beach Pros Realty Inc.",
@@ -61,7 +61,7 @@ const properties = [
 
   {
     image: "./assets/images/property-6.jpg",
-    alt: "Keller Williams Elite Town Center",
+    alt: "Pro Home Estate",
     badge: "",
     price: "$105.55",
     title: "Keller Williams Elite Town Center",
@@ -73,7 +73,7 @@ const properties = [
 
   {
     image: "./assets/images/property-7.jpg",
-    alt: "All Pros Real Estate",
+    alt: "Baku Home Estate",
     badge: "",
     price: "$739.65",
     title: "All Pros Real Estate",
@@ -85,7 +85,7 @@ const properties = [
 
   {
     image: "./assets/images/property-8.jpg",
-    alt: "FIT Realty",
+    alt: "Real Estate",
     badge: "",
     price: "$948.55",
     title: "FIT Realty",
