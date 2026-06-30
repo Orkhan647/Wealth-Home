@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | Wealthome</title>
+
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/register.css">
+
+</head>
+
+<body>
+
+<section class="register">
+
+    <div class="register-box">
+
+        <div class="logo-box">
+
+            <img
+                src="./assets/images/logo.png"
+                alt="Wealthome"
+                width="190"
+            >
+
+        </div>
+
+        <h1>Create Account</h1>
+
+        <p class="subtitle">
+            Join Wealthome and start finding your dream home.
+        </p>
+
+        <form id="registerForm">
+
+            <!-- Full Name -->
+
+            <div class="input-group">
+
+                <label for="fullname">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="fullname"
+                    placeholder="John Smith"
+                >
+
+                <small class="error"></small>
+
+            </div>
+
+
+            <!-- Username -->
+
+            <div class="input-group">
+
+                <label for="username">
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="johnsmith"
+                >
+
+                <small class="error"></small>
+
+            </div>
+
+
+            <!-- Email -->
+
+            <div class="input-group">
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="example@gmail.com"
+                >
+
+                <small class="error"></small>
+
+            </div>
+
+
+            <!-- Phone -->
+
+            <div class="input-group">
+
+                <label for="phone">
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="+994 50 123 45 67"
+                >
+
+                <small class="error"></small>
+
+            </div>
+
+
+            <!-- Country -->
+
+            <div class="input-group">
+
+                <label for="country">
+                    Country
+                </label>
+
+                <select id="country">
+
+                    <option value="">Select Country</option>
+
+                    <option>Azerbaijan</option>
+
+                    <option>Turkey</option>
+
+                    <option>Germany</option>
+
+                    <option>Poland</option>
+
+                    <option>United Kingdom</option>
+
+                    <option>Canada</option>
+
+                </select>
+
+                <small class="error"></small>
+
+            </div>
+
+
+            <!-- Birth Date -->
+
+            <div class="input-group">
+
+                <label for="birthday">
+                    Birth Date
+                </label>
+
+                <input
+                    type="date"
+                    id="birthday"
+                >
+
+                <small class="error"></small>
+
+            </div>
+
+
+            <!-- Password -->
+
+            <div class="input-group">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="********"
+                >
+
+                <small class="error"></small>
+
+            </div>
+
+
+            <!-- Confirm Password -->
+
+            <div class="input-group">
+
+                <label for="confirmPassword">
+                    Confirm Password
+                </label>
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="********"
+                >
+
+                <small class="error"></small>
+
+            </div>
+
+
+            <!-- Checkbox -->
+
+            <div class="checkbox-group">
+
+                <input
+                    type="checkbox"
+                    id="terms"
+                >
+
+                <label for="terms">
+
+                    I agree to the
+                    <a href="#">
+                        Terms &
+                        Conditions
+                    </a>
+
+                </label>
+
+            </div>
+
+            <small class="error checkbox-error"></small>
+
+
+            <!-- Button -->
+
+            <button
+                class="btn"
+                type="submit"
+            >
+                Create Account
+            </button>
+
+
+            <!-- Back -->
+
+            <a
+                href="./index.html"
+                class="back-btn"
+            >
+                ← Back to Home
+            </a>
+
+        </form>
+
+
+        <p class="login-text">
+
+            Already have an account?
+
+            <a href="./login.html">
+                Login
+            </a>
+
+        </p>
+
+    </div>
+
+</section>
+
+<script src="./assets/js/register.js"></script>
+
+</body>
+</html>
